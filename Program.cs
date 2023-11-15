@@ -16,6 +16,7 @@ class BirdWatcher
         Console.WriteLine($"The number of birds after their number is increased: {increasedBirdsNum}");
         Console.WriteLine($"During the week there were no birds: {dayWithoutBirds}");
         Console.WriteLine($"The total number of birds throught the week: {numberOfBirdsAllWeek}");
+        busyDays(thisWeekBirdsNum);
         
     }
 
@@ -73,5 +74,22 @@ class BirdWatcher
         }
 
         return totalBirds;
+    }
+
+    static void busyDays(int []thisWeekBird)
+    {
+        for (int i = 0; i < thisWeekBird.Length; i++)
+        {
+            string[] dayOftheWeekBirds = { "Monday", "Tuesday", "Wensday", "Thursday", "Friday", "Saturdsay", "Sunday" };
+            int busyDay = 5;
+            if (thisWeekBird[i]>=busyDay)
+            {
+                Console.WriteLine($"The {dayOftheWeekBirds[i]} is busy");
+                
+            }else if (thisWeekBird[i]<busyDay)
+            {
+                Console.WriteLine($"The {dayOftheWeekBirds[i]} is not busy");
+            }
+        }
     }
 }
