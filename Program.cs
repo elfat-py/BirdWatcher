@@ -5,7 +5,7 @@ class BirdWatcher
     public static void Main(string[] args)
     {
         int[] lastWeek = { 3, 5, 6, 8, 9, 7, 8 };
-        int[] thisWeekBirdsNum = { 5, 7, 8, 7, 3, 9, 4 };
+        int[] thisWeekBirdsNum = { 5, 7, 8, 7, 3, 9, 0 };
 
         int birdsToday = todayBirdsNum(thisWeekBirdsNum);
         int increasedBirdsNum = increaseTodayCount(birdsToday);
@@ -48,7 +48,7 @@ class BirdWatcher
 
     static int increaseTodayCount(int todayBirdsNum)
     {
-        int increasedCount = 0;
+        int increasedCount = 1;
         increasedCount += todayBirdsNum;
         return increasedCount;
     }
